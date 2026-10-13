@@ -1,0 +1,117 @@
+body {
+    background-color: hsl(217, 54%, 11%);       /* ძალიან მუქი ლურჯი ფონი */
+    height: 100vh;                            /* მთელი ეკრანის სიმაღლე */
+    margin: 0;                                /* კიდეების წაშლა */
+    display: flex;                            /* Flexbox */
+    align-items: center;                      /* ჰორიზონტალურად ცენტრში */
+    justify-content: center;                  /* ვერტიკალურად ცენტრში */
+    font-family: 'Outfit', Arial, sans-serif; /* შრიფტი */
+    padding: 20px;
+}
+
+/* მთავარი კონტეინერი */
+.nft-card {
+    background-color: hsl(216, 50%, 16%);     /* მუქი ლურჯი ბარათი */
+    padding: 24px;                            /* შიდა დაშორება */
+    border-radius: 15px;                      /* გადახრილი კუთხები */
+    max-width: 320px;                         /* ბარათის სიგანე */
+    width: 100%;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5); /* ღრმა ჩრდილი */
+}
+
+/* NFT სურათის ბოქსი (ეფექტისთვის) */
+.nft-image-container {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.nft-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* სათაური */
+.nft-card h1 {
+    color: hsl(0, 0%, 100%);                  /* თეთრი ტექსტი */
+    font-size: 20px;                          /* სათაურის ზომა */
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+/* სათაურზე მაუსის მიტანისას */
+.nft-card h1:hover {
+    color: hsl(178, 100%, 50%);               /* ციანი / ღია ცისფერი ფერი */
+}
+
+/* აღწერა */
+.nft-description {
+    color: hsl(215, 51%, 70%);                /* ღია ნაცრისფერი/ცისფერი ტექსტი */
+    font-size: 14px;                          /* ზომა */
+    line-height: 1.6;                         /* ხაზებს შორის დაშორება */
+    margin-bottom: 20px;
+}
+
+/* ფასისა და დროის ბოქსი */
+.nft-info {
+    display: flex;
+    justify-content: space-between;           /* ერთმანეთისგან მოშორება */
+    align-items: center;
+    border-bottom: 1px solid hsl(215, 32%, 27%); /*თხელი გამყოფი ხაზი ქვემოთ*/
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+/* ფასის ნაწილი */
+.nft-price {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: hsl(178, 100%, 50%);               /* ციანი ფერი */
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* დროის ნაწილი */
+.nft-time {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: hsl(215, 51%, 70%);                /* ნაცრისფერი ტექსტი */
+    font-size: 14px;
+}
+
+/* ავტორის ნაწილი (Footer) */
+.nft-author {
+    display: flex;
+    align-items: center;
+    gap: 15px;                                /* დაშორება სურათსა და ტექსტს შორის */
+}
+
+.author-avatar {
+    width: 33px;
+    height: 33px;
+    border: 1px solid white;                  /* თეთრი ჩარჩო ავატარს */
+    border-radius: 50%;                       /* მრგვალდება */
+}
+
+.nft-author p {
+    margin: 0;
+    color: hsl(215, 51%, 70%);
+    font-size: 14px;
+}
+
+.author-name {
+    color: hsl(0, 0%, 100%);                  /* სახელი თეთრია */
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.author-name:hover {
+    color: hsl(178, 100%, 50%);               /* ჰოვერზე იცვლის ფერს */
+}
